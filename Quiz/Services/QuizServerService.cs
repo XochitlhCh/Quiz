@@ -40,12 +40,6 @@ namespace QuizServer.Services
             //byte[] buffer = Encoding.UTF8.GetBytes(json);
             ////Enviamos el mensaje a todos los clientes
             //await client.SendAsync(buffer, buffer.Length, new IPEndPoint(IPAddress.Broadcast, 65000));
-
-
-
-
-
-
         }
 
 
