@@ -14,6 +14,7 @@ namespace QuizServer.Services
     {
         UdpClient listener;
         UdpClient client;
+        Thread? hilo;
 
         public QuizServerService()
         {
@@ -23,11 +24,31 @@ namespace QuizServer.Services
 
             //RecibirRectangulos(); //Hilo principal
 
-            Thread hilo = new(RecibirRespuestas);
+            hilo = new(RecibirRespuestas);
             hilo.IsBackground = true;
             hilo.Start();
+        
         }
+
+
         public event Action<RespuestaDTO,String>? RespuestaRecibida;
+
+
+        public async Task RecibirUusarios()
+        {
+            //var json = JsonSerializer.Serialize(usuario);
+            //byte[] buffer = Encoding.UTF8.GetBytes(json);
+            ////Enviamos el mensaje a todos los clientes
+            //await client.SendAsync(buffer, buffer.Length, new IPEndPoint(IPAddress.Broadcast, 65000));
+
+
+
+
+
+
+        }
+
+
 
         private void RecibirRespuestas()
         {
@@ -50,5 +71,10 @@ namespace QuizServer.Services
                 }
             }
         }
+
+        
+
+
+
     }
 }

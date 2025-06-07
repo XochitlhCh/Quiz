@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace QuizServer.Models.DTOs
 {
-    class ConexionDTO
+    public class FinDTO
     {
+
     }
 }
