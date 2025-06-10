@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace QuizServer.Models.DTOs
 {
-    public class PreguntaDTO
+    public class RespuestaDTO
     {
-        public int Time { get; set; }
-
-
+        public string Respuesta { get; set; }
     }
 }

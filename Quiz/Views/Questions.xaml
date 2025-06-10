@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="QuizServer.Views.Questions"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuizServer.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="1280">
+    <DockPanel>
+        <Label DockPanel.Dock="Top" Foreground="White" Content="Preparacion..." FontSize="30" HorizontalAlignment="Center" Margin="0 0"/>
+        <Label DockPanel.Dock="Top" Foreground="White" Content="Ingrese sus preguntas, de click en Finalizar para pasar al Quiz" FontSize="20" HorizontalAlignment="Center" Margin="0 0 0 20"/>
+
+        <Border MinWidth="500px" BorderBrush="White" BorderThickness="5px" Margin="50px 0px 50px 50px">
+            <StackPanel>
+
+
+                <TextBox TextWrapping="Wrap"   Margin="20px" FontSize="30" Foreground="Black" Background="White" HorizontalAlignment="Stretch" Text="{Binding NombreUsuario}" VerticalAlignment="Center" />
+
+                <TextBlock TextWrapping="Wrap" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" FontSize="18" Foreground="White" VerticalAlignment="Center" Margin="20  0 10 10px">
+             Respuesta
+                </TextBlock>
+
+                <TextBox Text="{Binding Opcion1}" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Margin=" 20 5px" FontSize="20" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                <TextBlock TextWrapping="Wrap" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" FontSize="18" Foreground="White" VerticalAlignment="Center" Margin="20  0 10 10px">
+                Escriba 3 distractores
+                </TextBlock>
+                <TextBox Text="{Binding Opcion2}" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Margin="20 5px" FontSize="20" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                <TextBox Text="{Binding Opcion3}" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Margin="20 5px" FontSize="20" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                <TextBox Text="{Binding Opcion4}" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Margin="20 5px" FontSize="20" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+
+
+
+                <WrapPanel>
+
+                    <Button Command="{Binding NuevaPreguntaCommand}"  Width="300px"  Margin="20px" FontSize="30" Foreground="White" Background="Green" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        Nueva pregunta
+                    </Button>
+                    <Button Command="{Binding IniciarCommand}" Width="300px"  Margin="20px" FontSize="30" Foreground="White" Background="Green" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        Iniciar 
+                    </Button>
+                </WrapPanel>
+              
+            </StackPanel>
+
+        </Border>
+
+    </DockPanel>
+</UserControl>

@@ -9,7 +9,7 @@ namespace QuizServer.Models
 {
     public class Usuario
     {
-        public EndPoint EndPoint { get; set; }
+        public string EndPoint { get; set; }
         public string Nombre { get; set; }
         public int Puntuacion { get; set; }
     }

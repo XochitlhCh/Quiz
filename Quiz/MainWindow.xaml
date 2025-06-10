@@ -3,29 +3,31 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Quiz" xmlns:views="clr-namespace:QuizServer.Views" xmlns:viewmodels="clr-namespace:QuizServer.Models.ViewModels"
+        xmlns:local="clr-namespace:Quiz" 
+        xmlns:views="clr-namespace:QuizServer.Views" 
+        xmlns:viewmodels="clr-namespace:QuizServer.Models.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="800">
+        Background="DarkViolet"
+        Title="MainWindow" Height="720" Width="1280">
     <Window.DataContext>
         <viewmodels:QuizServerViewModel></viewmodels:QuizServerViewModel>
     </Window.DataContext>
-    <Grid>
-        <views:ServerView></views:ServerView>
-
-        <views:QuizView>
-            <views:QuizView.Style>
+    <Grid >
+       
+        <views:Questions Loaded="Questions_Loaded">
+            <views:Questions.Style>
                 <Style TargetType="UserControl">
                     <Setter Property="Visibility" Value="Collapsed"></Setter>
 
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding Vista}"
-                               Value="{x:Static viewmodels:Vistas.Quiz}">
+                    Value="{x:Static viewmodels:Vistas.Questions}">
                             <Setter Property="Visibility" Value="Visible"></Setter>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
-            </views:QuizView.Style>
-        </views:QuizView>
+            </views:Questions.Style>
+        </views:Questions>
 
     </Grid>
 </Window>

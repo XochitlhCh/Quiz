@@ -8,6 +8,7 @@ namespace QuizServer.Models.DTOs
 {
     public class Pregunta
     {
+        public int Id { get; set; }
         public int Time { get; set; }
         public string Texto { get; set; }
         public string[] Respuestas { get; set; } = new string[4];
