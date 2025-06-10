@@ -21,20 +21,20 @@ namespace QuizServer.Services
             listener.EnableBroadcast = true;
 
             //RecibirRectangulos(); //Hilo principal
-
             hilo = new(RecibirRespuestas);
             hilo.IsBackground = true;
             hilo.Start();
-        
+
+
         }
 
 
         public event Action<RespuestaDTO,String>? RespuestaRecibida;
 
 
-        public async Task RecibirUusarios()
+        public void RecibirUusarios()
         {
-
+           
         }
 
 

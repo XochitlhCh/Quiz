@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace QuizServer.Models.DTOs
 {
-    public class Pregunta
+    public partial class Pregunta:ObservableObject
     {
-        public int Id { get; set; }
-        public int Time { get; set; }
-        public string Texto { get; set; }
-        public string[] Respuestas { get; set; } = new string[4];
-        public string Respuesta { get; set; }
+        [ObservableProperty]
+        int time;
+        [ObservableProperty]
+
+        string texto;
+        [ObservableProperty]
+
+        string[] respuestas = new string[4];
+        [ObservableProperty]
+
+        int respuesta;
     }
 }

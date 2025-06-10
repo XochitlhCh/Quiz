@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="QuizServer.Views.Resultados"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuizServer.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel>
+        <Label DockPanel.Dock="Top" Foreground="White" Content="Resultados" FontSize="30" HorizontalAlignment="Center" Margin="0 0"/>
+        <Label DockPanel.Dock="Top" Foreground="White" Content="{Binding TiempoTexto}" FontSize="20" HorizontalAlignment="Center" Margin="0 0 0 20"/>
+
+        <Border MinWidth="500px" BorderBrush="White" BorderThickness="5px" Margin="50px 0px 50px 50px">
+            <StackPanel>
+
+
+
+                <ItemsControl ItemsSource="{Binding Usuarios}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="5"></UniformGrid>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+
+                        <DataTemplate>
+                            <Border Margin="5" Height="40"  Background="#99000000" >
+                                <TextBlock Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                                    <Run Text="{Binding Nombre}"/>
+                                    <Run Text=" - "/>
+                                    <Run Text="{Binding Puntuacion}"/>
+
+
+                                </TextBlock>
+
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+
+
+               
+
+            </StackPanel>
+
+        </Border>
+
+    </DockPanel>
+</UserControl>

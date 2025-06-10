@@ -7,16 +7,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel>
-        <Label DockPanel.Dock="Top" Foreground="White" HorizontalAlignment="Right" Content="Elige tu respuesta" FontSize="20" Margin="5"/>
+        <Label DockPanel.Dock="Top" Foreground="White" HorizontalAlignment="Right" Content="{Binding NombreUsuario}" FontSize="20" Margin="5"/>
 
         <Label DockPanel.Dock="Top" Foreground="White" Content="Elige tu respuesta" FontSize="50" HorizontalAlignment="Center" Margin="0 0 0 20"/>
         
         <Border MinWidth="500px" BorderBrush="White" BorderThickness="5px" Margin="150px 0px 150px 50px">        
             <UniformGrid >
-                <Button Command="{Binding EnviarRespuestaCommand}" CommandParameter="A" FontSize="50" Foreground="White" Margin="20px"  Background="Yellow">A</Button>
-                <Button Command="{Binding EnviarRespuestaCommand}" CommandParameter="B" FontSize="50" Foreground="White" Margin="20px" Background="Cyan">B</Button>
-                <Button Command="{Binding EnviarRespuestaCommand}" CommandParameter="C" FontSize="50" Foreground="White" Margin="20px"  Background="Green">C</Button>
-                <Button Command="{Binding EnviarRespuestaCommand}" CommandParameter="D" FontSize="50" Foreground="White" Margin="20px" Background="RED">D</Button>
+                <Button Command="{Binding EnviarRespuestaCommand}" CommandParameter="0" FontSize="50" Foreground="White" Margin="20px"  Background="Yellow">A</Button>
+                <Button Command="{Binding EnviarRespuestaCommand}" CommandParameter="1" FontSize="50" Foreground="White" Margin="20px" Background="Cyan">B</Button>
+                <Button Command="{Binding EnviarRespuestaCommand}" CommandParameter="2" FontSize="50" Foreground="White" Margin="20px"  Background="Green">C</Button>
+                <Button Command="{Binding EnviarRespuestaCommand}" CommandParameter="3" FontSize="50" Foreground="White" Margin="20px" Background="RED">D</Button>
         </UniformGrid>
         </Border>
 

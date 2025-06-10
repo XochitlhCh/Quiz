@@ -21,7 +21,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <TextBox  Grid.Row="0" Grid.Column="0" Margin="20px" FontSize="30" Foreground="Black" Background="White" HorizontalAlignment="Stretch" Text="{Binding nombreUsuario}" VerticalAlignment="Center" />
+                <TextBox  Grid.Row="0" Grid.Column="0" Margin="20px" FontSize="30" Foreground="Black" Background="White" HorizontalAlignment="Stretch" Text="{Binding NombreUsuario}" VerticalAlignment="Center" />
                 <Label Grid.Row="0" Grid.Column="1"  FontSize="30" Foreground="White" VerticalAlignment="Center" Margin="10px">
                     <Run  Text="{Binding Id}"/>
                 </Label>

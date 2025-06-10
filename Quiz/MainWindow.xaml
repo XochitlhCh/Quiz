@@ -29,5 +29,53 @@
             </views:Questions.Style>
         </views:Questions>
 
+        <views:Espera >
+            <views:Espera.Style>
+                <Style TargetType="UserControl">
+                    <Setter Property="Visibility" Value="Collapsed"></Setter>
+
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Vista}"
+            Value="{x:Static viewmodels:Vistas.Espera}">
+                            <Setter Property="Visibility" Value="Visible"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </views:Espera.Style>
+        </views:Espera>
+
+        <views:Juego >
+            <views:Juego.Style>
+                <Style TargetType="UserControl">
+                    <Setter Property="Visibility" Value="Collapsed"></Setter>
+
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Vista}"
+     Value="{x:Static viewmodels:Vistas.Juego}">
+                            <Setter Property="Visibility" Value="Visible"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </views:Juego.Style>
+        </views:Juego>
+        
+        
+        
+        <views:Resultados >
+            <views:Resultados.Style>
+                <Style TargetType="UserControl">
+                    <Setter Property="Visibility" Value="Collapsed"></Setter>
+
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Vista}"
+Value="{x:Static viewmodels:Vistas.Asiertos}">
+                            <Setter Property="Visibility" Value="Visible"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </views:Resultados.Style>
+        </views:Resultados>
+
+
     </Grid>
 </Window>

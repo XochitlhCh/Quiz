@@ -14,19 +14,19 @@
             <StackPanel>
 
 
-                <TextBox TextWrapping="Wrap"   Margin="20px" FontSize="30" Foreground="Black" Background="White" HorizontalAlignment="Stretch" Text="{Binding NombreUsuario}" VerticalAlignment="Center" />
+                <TextBox TextWrapping="Wrap"   Margin="20px" FontSize="30" Foreground="Black" Background="White" HorizontalAlignment="Stretch" Text="{Binding PreguntaSeleccionada.Texto}" VerticalAlignment="Center" />
 
                 <TextBlock TextWrapping="Wrap" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" FontSize="18" Foreground="White" VerticalAlignment="Center" Margin="20  0 10 10px">
              Respuesta
                 </TextBlock>
 
-                <TextBox Text="{Binding Opcion1}" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Margin=" 20 5px" FontSize="20" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                <TextBox Text="{Binding PreguntaSeleccionada.Respuestas[0]}" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Margin=" 20 5px" FontSize="20" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
                 <TextBlock TextWrapping="Wrap" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" FontSize="18" Foreground="White" VerticalAlignment="Center" Margin="20  0 10 10px">
                 Escriba 3 distractores
                 </TextBlock>
-                <TextBox Text="{Binding Opcion2}" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Margin="20 5px" FontSize="20" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-                <TextBox Text="{Binding Opcion3}" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Margin="20 5px" FontSize="20" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-                <TextBox Text="{Binding Opcion4}" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Margin="20 5px" FontSize="20" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                <TextBox Text="{Binding PreguntaSeleccionada.Respuestas[1]}" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Margin="20 5px" FontSize="20" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                <TextBox Text="{Binding PreguntaSeleccionada.Respuestas[2]}" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Margin="20 5px" FontSize="20" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                <TextBox Text="{Binding PreguntaSeleccionada.Respuestas[3]}" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Margin="20 5px" FontSize="20" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
 
 
 
@@ -35,7 +35,7 @@
                     <Button Command="{Binding NuevaPreguntaCommand}"  Width="300px"  Margin="20px" FontSize="30" Foreground="White" Background="Green" HorizontalAlignment="Center" VerticalAlignment="Center">
                         Nueva pregunta
                     </Button>
-                    <Button Command="{Binding IniciarCommand}" Width="300px"  Margin="20px" FontSize="30" Foreground="White" Background="Green" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Command="{Binding EsperarJugadoresCommand}" Width="300px"  Margin="20px" FontSize="30" Foreground="White" Background="Green" HorizontalAlignment="Center" VerticalAlignment="Center">
                         Iniciar 
                     </Button>
                 </WrapPanel>
