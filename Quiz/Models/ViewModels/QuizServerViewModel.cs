@@ -24,7 +24,7 @@ namespace QuizServer.Models.ViewModels
         [ObservableProperty]
         Dictionary<Pregunta, List<Respuesta>> respuestas = new Dictionary<Pregunta, List<Respuesta>>();
         [ObservableProperty]
-        public Pregunta preguntaSeleccionada = new Pregunta() { Time = 10, Texto = "¿Cuál es la capital de Francia?", Respuestas = new string[] { "París", "Londres", "Berlín", "Madrid" }, Respuesta = 0 };
+        public Pregunta preguntaSeleccionada = new Pregunta();
         [ObservableProperty]
         bool showAnswers = false;
         [ObservableProperty]
@@ -44,8 +44,6 @@ namespace QuizServer.Models.ViewModels
 
         public QuizServerViewModel()
         {
-            preguntaSeleccionada = new Pregunta() { Time = 10, Texto = "¿Cuál es la capital de Francia?", Respuestas = new string[] { "París", "Londres", "Berlín", "Madrid" }, Respuesta = 0 };
-            respuestas.Add(preguntaSeleccionada, new List<Respuesta>());
             VerQuizCommand = new RelayCommand(VerQuiz);
             quizServerService.RespuestaRecibida += QuizServerService_RespuestaRecibida;
 
